@@ -45,7 +45,6 @@ func spdyExecutor(w http.ResponseWriter, r *http.Request) {
 	action := r.URL.Query().Get("action")
 	path := r.URL.Query().Get("path")
 	user := r.URL.Query().Get("user")
-
 	namespace := fmt.Sprintf("%s-%s", clusterName, masterID)
 
 	// 获取需要进入的pod, 通过标签筛选
